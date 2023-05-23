@@ -1,12 +1,12 @@
 import java.util.Random;
 import java.util.Scanner;
-//comment
+
 public class GuessNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Random randomNum = new Random();
         int computerNum = randomNum.nextInt(100);
-        int playerNum = 0;
+        int playerNum;
 
         while (true) {
             System.out.print("Guess a number (1-100): ");
@@ -27,7 +27,7 @@ public class GuessNumber {
                     break;
                 } else if (playerNum < computerNum) {
                     System.out.println("Too low!");
-                } else if (playerNum > computerNum) {
+                } else {
                     System.out.println("Too high!");
                 }
             }
